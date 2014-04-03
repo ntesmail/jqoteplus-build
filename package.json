@@ -1,12 +1,9 @@
 {
   "name": "jqoteplus-build",
   "description": "precompile jqoteplus templates",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "homepage": "https://github.com/ntesmail/jqoteplus-build",
-  "author": {
-    "name": "ntesmail",
-    "email": "yongwumai@gmail.com"
-  },
+  "author": "ntesmail <ntesmails@163.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/ntesmail/jqoteplus-build.git"
@@ -38,5 +35,9 @@
   },
   "keywords": [
     "gruntplugin"
-  ]
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "license": "MIT"
 }
