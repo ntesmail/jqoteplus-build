@@ -2,7 +2,7 @@
 
 > precompile jqoteplus templates
 
-
+前端模板可以让我们很简单的组建一系列复杂的html结构。在项目的累计中，会发现我们所用的模板越来越多，使用模板的第一步就是让通过模板解析工具将模板解析成function再执行，为了节省浏览器的编译时间，所以我们可以将这一步提前做了。所以有了jqoteplus-build的诞生。
 
 ## Getting Started
 This plugin requires Grunt `~0.4.4`
@@ -48,13 +48,13 @@ Default value: ``
 
 #### options.exclude
 Type: `Array`
-Default value: `',  '`
+Default value: `none`
 
 用于定义不需要预编译的文件名/路径数组。
 
 #### options.deployPath
 Type: `String`
-Default value: ``
+Default value: `none`
 
 编译后的文件路径
 
