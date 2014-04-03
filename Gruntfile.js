@@ -35,7 +35,7 @@ module.exports = function(grunt) {
                     exclude: ['read/print'],
                     // root: '',
                     deployPath: 'test/build/',
-                    deployName: 'templatefunc.js'
+                    deployName: 'template.js'
                 }
             }
         },

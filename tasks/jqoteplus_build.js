@@ -18,8 +18,7 @@ module.exports = function(grunt) {
 
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
-          // force: false,
-          // reporterOutput: null,
+          deployName: 'templatefunc.js',
         });
         
         var that = this,

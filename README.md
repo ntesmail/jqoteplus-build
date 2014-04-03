@@ -2,6 +2,8 @@
 
 > precompile jqoteplus templates
 
+
+
 ## Getting Started
 This plugin requires Grunt `~0.4.4`
 
@@ -25,65 +27,59 @@ In your project's Gruntfile, add a section named `jqoteplus_build` to the data o
 ```js
 grunt.initConfig({
   jqoteplus_build: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    build: {
+        src: [],
+        options: {
+            exclude: [],
+            deployPath: '',
+            deployName: ''
+        }
+    }
   },
 });
 ```
+### src
+Type: `Array`
+Default value: ``
+
+定义需要预编译的文件数组
 
 ### Options
 
-#### options.separator
-Type: `String`
+#### options.exclude
+Type: `Array`
 Default value: `',  '`
 
-A string value that is used to do something with whatever.
+用于定义不需要预编译的文件名/路径数组。
 
-#### options.punctuation
+#### options.deployPath
 Type: `String`
-Default value: `'.'`
+Default value: ``
 
-A string value that is used to do something else with whatever else.
+编译后的文件路径
+
+#### options.deployName
+Type: `String`
+Default value: `templatefunc.js`
+
+编译后的文件名字
 
 ### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
+定义`test/jqote` 下面的所有ftl后缀文件都需要编译。exclude说明包含`test/jqote/read`的文件路径或者文件名字不需要编译，`deployPath`和`deployName`组合起来就是最后编译结果路径。
 ```js
 grunt.initConfig({
   jqoteplus_build: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+    build: {
+        src: ['test/jqote/**/*.ftl'],
+        options: {
+            exclude: ['test/jqote/read'],
+            deployPath: 'test/build/',
+            deployName: 'template.js'
+        }
+    }
   },
 });
 ```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  jqoteplus_build: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+###0.1.2 release
