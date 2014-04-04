@@ -2,7 +2,9 @@
 
 > precompile jqoteplus templates
 
-前端模板可以让我们很简单的组建一系列复杂的html结构。在项目的累计中，会发现我们所用的模板越来越多，使用模板的第一步就是让通过模板解析工具将模板解析成function再执行，为了节省浏览器的编译时间，所以我们可以将这一步提前做了。所以有了jqoteplus-build的诞生。
+前端模板可以让我们很简单的组建一系列复杂的html结构。在项目的累积中，所用的模板越来越多，使用模板的第一步是将模板解析成function再执行，为了节省浏览器的解析编译花费的时间，所以我们可以将这一步提前完成。所以有了jqoteplus-build的诞生。
+
+模板需要定义在`<script type="text/x-jqote-template" id="key"></script>`标签中，`type`为标示符，`id`为key，在jqoteplus调用`$.jqote('key', data)`
 
 ## Getting Started
 This plugin requires Grunt `~0.4.4`
