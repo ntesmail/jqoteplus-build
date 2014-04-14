@@ -1,7 +1,7 @@
 {
   "name": "jqoteplus-build",
   "description": "precompile jqoteplus templates",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/ntesmail/jqoteplus-build",
   "author": "ntesmail <ntesmails@163.com>",
   "repository": {
